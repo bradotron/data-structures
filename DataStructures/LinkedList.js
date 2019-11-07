@@ -91,7 +91,6 @@ class LinkedList {
   // removeData(data)
 
   // Helpers
-  // TODO
   isEmpty() {
     return this.size == 0;
   }
@@ -104,11 +103,11 @@ class LinkedList {
     let current = this.head;
     let output = "";
     while (current) {
-      output += current.data + ' ';
+      output += current.data + " ";
       current = current.next;
     }
     console.log(output);
   }
 }
 
-module.exports = [Node, LinkedList];
+module.exports = { Node, LinkedList };
