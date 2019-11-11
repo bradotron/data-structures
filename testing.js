@@ -1,33 +1,51 @@
-const {Node, LinkedList} = require('./DataStructures/LinkedList');
+const {Graph} = require('./DataStructures/Graph');
 
-let testList = new LinkedList();
+let g = new Graph();
+let vertices =  ['A', 'B', 'C', 'D', 'E', 'F'];
 
-console.log(testList.isEmpty());
+for(let i of vertices) {
+  g.addVertex(i);
+}
 
-testList.add(10);
-testList.add(20);
-testList.add(30);
-testList.add(40);
-testList.add(50);
+// console.log('Graph without Edges:')
+// g.printGraph();
+// console.log('-------------------');
+// adding edges 
+g.addEdge('A', 'B'); 
+g.addEdge('A', 'D'); 
+g.addEdge('A', 'E'); 
+g.addEdge('B', 'C'); 
+g.addEdge('D', 'E'); 
+g.addEdge('E', 'F'); 
+g.addEdge('E', 'C'); 
+g.addEdge('C', 'F'); 
 
-testList.printList();
+console.log('Graph with Edges:')
+g.printGraph();
+console.log('-------------------');
 
-console.log(testList.isEmpty());
+// console.log('BFS')
+// g.bfs('A');
+// console.log('-------------------');
 
-console.log(testList.getSize());
+console.log('DFS')
+g.dfs('A');
 
-console.log('Removing index 0: ' + testList.removeFrom(0) );
+console.log('-------------------');
+console.log('g is connected? ' + g.isConnected());
+console.log('-------------------');
 
-testList.printList();
+// create a new graph that will be disconnected
+let disconnected = new Graph();
+for(let i = 0; i<5; i++) {
+  disconnected.addVertex(i);
+}
 
-console.log(testList.getSize());
+disconnected.addEdge(0, 1);
+disconnected.addEdge(1, 2);
+disconnected.addEdge(3, 4);
 
-testList.insertAt(69, 3);
-testList.printList();
-console.log(testList.getSize());
-
-testList.insertAt('potato', 3);
-testList.printList();
-console.log(testList.getSize());
+disconnected.printGraph();
+console.log('g is connected? ' + disconnected.isConnected());
 
 
