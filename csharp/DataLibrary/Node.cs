@@ -1,9 +1,10 @@
 ﻿namespace DataLibrary;
 public class Node<T>
 {
-  private T data;
-  private NodeList<T> neighbors;
+  private T? data;
+  private NodeList<T>? neighbors;
 
+  public Node() { }
   public Node(T data)
   {
     this.data = data;

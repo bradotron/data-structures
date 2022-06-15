@@ -1,8 +1,9 @@
 using NUnit.Framework;
+using DataLibrary;
 
 namespace DataLibrary.Tests;
 
-public class Tests
+public class NodeTests
 {
   [SetUp]
   public void Setup()
