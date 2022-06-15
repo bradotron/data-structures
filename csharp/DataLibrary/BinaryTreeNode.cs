@@ -2,8 +2,8 @@ namespace DataLibrary;
 
 public class BinaryTreeNode<T> : Node<T>
 {
-  private BinaryTreeNode<T>? _Left;
-  private BinaryTreeNode<T>? _Right;
+  private BinaryTreeNode<T>? left;
+  private BinaryTreeNode<T>? right;
 
   public BinaryTreeNode() { }
   public BinaryTreeNode(T data) : base(data) { }
@@ -31,20 +31,20 @@ public class BinaryTreeNode<T> : Node<T>
   {
     get
     {
-      return _Left;
+      return left;
     }
     set
     {
-      if (_Left != null)
+      if (left != null)
       {
-        base.Neighbors.Remove(_Left);
+        base.Neighbors.Remove(left);
       }
 
-      _Left = value;
+      left = value;
 
       if (value != null)
       {
-        base.Neighbors.Add(_Left);
+        base.Neighbors.Add(left);
       }
     }
   }
@@ -52,20 +52,20 @@ public class BinaryTreeNode<T> : Node<T>
   {
     get
     {
-      return _Right;
+      return right;
     }
     set
     {
-      if (_Right != null)
+      if (right != null)
       {
-        base.Neighbors.Remove(_Right);
+        base.Neighbors.Remove(right);
       }
 
-      _Right = value;
+      right = value;
 
       if (value != null)
       {
-        base.Neighbors.Add(_Right);
+        base.Neighbors.Add(right);
       }
     }
   }
