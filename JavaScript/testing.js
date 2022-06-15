@@ -1,4 +1,4 @@
-const {Graph} = require('./DataStructures/Graph');
+const {Graph} = require('./JavaScript/DataStructures/Graph');
 
 let g = new Graph();
 let vertices =  ['A', 'B', 'C', 'D', 'E', 'F'];
