@@ -13,8 +13,7 @@ public class NodeTests
   [Test]
   public void Create()
   {
- 
-    Node<string> testNode2 = new DataLibrary.Node<string>("test");
+     Node<string> testNode2 = new DataLibrary.Node<string>("test");
     Assert.That(testNode2, Is.Not.Null);
     Assert.That(testNode2.Value, Is.EqualTo("test"));
 
@@ -25,7 +24,6 @@ public class NodeTests
     Node<string> testNode3 = new Node<string>("node", testNodeList1);
     Assert.That(testNode3, Is.Not.Null);
     Assert.That(testNode3.Value, Is.EqualTo("node"));
-    Assert.That(testNode3.Neighbors.Count, Is.EqualTo(2));
-    
+   
   }
 }

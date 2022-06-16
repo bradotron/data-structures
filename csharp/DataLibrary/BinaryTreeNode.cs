@@ -12,19 +12,6 @@ public class BinaryTreeNode<T> : Node<T>
     base.Value = data;
     Left = left;
     Right = right;
-
-    NodeList<T> children = new NodeList<T>();
-
-    if (Left != null)
-    {
-      children.Add(Left);
-    }
-    if (Right != null)
-    {
-      children.Add(Right);
-    }
-
-    base.Neighbors = children;
   }
 
   public BinaryTreeNode<T> Left
@@ -35,17 +22,7 @@ public class BinaryTreeNode<T> : Node<T>
     }
     set
     {
-      if (left != null)
-      {
-        base.Neighbors.Remove(left);
-      }
-
       left = value;
-
-      if (value != null)
-      {
-        base.Neighbors.Add(left);
-      }
     }
   }
   public BinaryTreeNode<T> Right
@@ -56,17 +33,7 @@ public class BinaryTreeNode<T> : Node<T>
     }
     set
     {
-      if (right != null)
-      {
-        base.Neighbors.Remove(right);
-      }
-
       right = value;
-
-      if (value != null)
-      {
-        base.Neighbors.Add(right);
-      }
     }
   }
 }

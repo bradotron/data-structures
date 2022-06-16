@@ -28,7 +28,7 @@ public class Node<T>
     }
   }
 
-  public NodeList<T> Neighbors
+  protected NodeList<T> Neighbors
   {
     get
     {

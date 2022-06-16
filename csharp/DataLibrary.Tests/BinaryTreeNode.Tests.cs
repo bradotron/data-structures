@@ -29,9 +29,7 @@ public class BinaryTreeNodeTests
 
     testNode.Left = null;
     Assert.That(testNode.Left, Is.Null);
-    Assert.That(testNode.Neighbors.Count, Is.EqualTo(1));
     testNode.Right = null;
     Assert.That(testNode.Right, Is.Null);
-    Assert.That(testNode.Neighbors.Count, Is.EqualTo(0));
   }
 }
